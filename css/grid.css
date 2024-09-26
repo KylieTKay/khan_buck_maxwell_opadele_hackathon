@@ -89,8 +89,8 @@ body, p, h1, h2, h3, h4, h5 {
       display: grid; 
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-column-gap: 20px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 36px;
+      padding-right: 36px;
    }
 
    .m-col-auto {grid-column: auto;}
@@ -148,8 +148,8 @@ body, p, h1, h2, h3, h4, h5 {
       display: grid; 
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-column-gap: 30px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 140px;
+      padding-right: 140px;
    }
 
    .l-col-auto {grid-column: auto;}
