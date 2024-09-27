@@ -2,7 +2,7 @@
 
 body {
   background: a.$white;
-  height: 10000px;
+  // height: 10000px;
 }
 
 .moreBtn {
@@ -268,7 +268,7 @@ main {
 
   .reel-txt{
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 14px;
     font-family: a.$font1;
     z-index: 50;
@@ -538,7 +538,7 @@ main {
 }
 .reel-btm-txt{
   width: fit-content;
-  border: 2px solid a.$black;
+  border: .5px solid a.$black;
   border-radius: 20px;
   display: flex;
   z-index: 50;
@@ -551,7 +551,7 @@ main {
  h2{
    width: 60%;
    text-align: center;
-   font-weight: bold;
+   font-weight: normal;
    font-size: 14px;
    font-family: a.$font1;
    padding: 15px 0px;
@@ -561,5 +561,55 @@ main {
     line-height: 30px;
   }
  }
+}
+#main-footer{
+  justify-self: center;
+  #baner-logo{
+    background-color: a.$fanshaweRed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+     padding: 10px 0;
+      width: 80px;
+      height: 80px;
+     
+    }
+  }
 
+  #footer-logo{
+    display: flex;
+    padding: 20px 0;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @media screen and (min-width: 768px){
+      width:55%;
+    }
+    
+    .footer-3-logo{
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      overflow: hidden;
+     
+      img{
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color:a.$fanshaweRed;
+       
+      }
+    }
+    
+  }
+
+  p{
+    padding: 20px 0;
+    font-family: a.$font1;
+    text-align: center;
+    @media screen and (min-width: 768px){
+      font-size: 12px;
+    }
+  }
 }
