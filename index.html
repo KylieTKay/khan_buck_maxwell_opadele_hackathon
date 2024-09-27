@@ -9,12 +9,13 @@
     only choose one -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <div>
-        <h2 class="hidden">Hackathon Index</h2>
+        <h1 class="hidden">Hackathon Index</h1>
         <header>
             <div class="main-header grid-con">
             <div id="hamburger" class="col-start-1">
@@ -60,7 +61,8 @@
                     <button class="expandingArrow"><i class=" fa fa-solid fa-arrow-right"></i></button>
                 </div>
             </section>
-            <section id="reelSec" class="grid-con">
+            <!-- <section id="reelSec" class="grid-con">
+                <h2 class="hidden"> Industry Night Welcome Message</h2>
                 <p class="col-span-full m-col-start-3 m-col-end-11">
                 Welcome to Event, the original social
                 entertainment venue! Get ready to
@@ -69,7 +71,47 @@
                 <div id="videoPlaceHolder" class="videoCon box col-span-full m-col-start-2 m-col-end-12 l-col-start-3 l-col-end-11">
                     <i class="fa fa-play"></i>
                 </div>
-            </section>
+            </section> -->
+            <!-- dev.eo start -->
+            <!-- Video Section Start -->
+                <section id="reel-container" class="grid-con">
+                 <h2 class="hidden">Video Reel On Industry Night</h2>
+                 <h2 class="reel-txt col-span-full m-col-start-3 m-col-span-8">Welcome To Event, the original Social Entertaiment Venue! Get ready to get playful </h2>
+                    <!--  -->
+             <div id="player-container" class="col-span-full">
+                <video class="player "  controls preload="metadata" poster="images/poster-red.jpg">
+                    <source src="video/fanshawe-industy-night-video.mp4" type="video/mp4">
+                    <source src="video/fanshawe-industy-night-video.webm" type="video/webm">
+                    <p>Ooops, something went wrong. You may be using an oudated browser</p>
+                </video>
+             </div>
+          
+
+                <!-- Floating Red Bubbles -->
+                <div id="bubble" class="col-span-full">
+                <div class="bubble bubble-1"></div>
+                <div class="bubble bubble-2"></div>
+                <div class="bubble bubble-3"></div>
+                <div class="bubble bubble-4"></div>
+                <div class="bubble bubble-5"></div>
+                <div class="bubble bubble-6"></div>
+                <div class="bubble bubble-7"></div>
+                </div>
+                <!-- Floating Image Boxes -->
+                        <div>
+                            <div class="float-img box-1"><img src="images/2024-04-05-Interactive-Media-Design-SILex-presentations-TC-23.jpg" alt="Industry Night Snaps"></div>
+                            <div class="float-img box-2"><img src="images/2024-04-05-Interactive-Media-Design-SILex-presentations-TC-22.jpg" alt="Industry Night Snaps"></div>
+                            <div class="float-img box-3"><img src="images/2024-04-05-Interactive-Media-Design-SILex-presentations-TC-21.jpg" alt="Industry Night Snaps"></div>
+                            <div class="float-img box-4"><img src="images/2024-04-05-Interactive-Media-Design-SILex-Presentations-HC-13.jpg" alt="Industry Night Snaps"></div>
+                            
+                        </div>
+            
+                    <div class="reel-btm-txt col-span-full">
+                <h2 >Create Memories Around The Table</h2>
+                </div>
+                </section>
+         <!-- Video Section End -->
+             <!-- dev.eo end -->
             <section id="wordSliderBG">
                 <h2 id="BGwords">WORDS WORDS WORDS WORDS</h2>
             </section>
@@ -79,6 +121,7 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit iure necessitatibus veniam cupiditate adipisci provident voluptates.
                     </h2>
                     <div class="moreBtn">
+                        <h3 class="hidden">Our Campus Building Location</h3>
                         <h4>MORE INFO</h4>
                         <button class="expandingArrow"><i class=" fa fa-solid fa-arrow-right"></i></button>
                     </div>
@@ -109,7 +152,8 @@
                         </div>
                     </div>
             </section>
-            <sectcion class="grid-con" id="finalist">
+            <!-- dev.eo changing section to Div - for some reason sectcion not allowed as child of element main -->
+                        <div class="grid-con finalist" >
                 <h3 class="secTitle col-span-2">
                     <span>FINALIST | </span>TOP 3
                 </h3>
@@ -125,8 +169,9 @@
                         <li>Vestibulum auctor dapibus neque.</li>
                     </ul>
                 </div>
-            </sectcion>
-                        <sectcion class="grid-con" id="finalist">
+            </div>
+             <!-- dev.eo changing section to Div - for some reason sectcion not allowed as child of element main -->
+                        <div class="grid-con finalist">
                             <h3 class="secTitle col-span-full">
                                 <span>CLIENT PROJECT | </span>Level 4 Students
                             </h3>
@@ -147,9 +192,10 @@
                             <div class="col-span-2 col-start-3 clientInfo">
                                 <div class="box clientProjectImg"></div>
                             </div>
-                        </sectcion>
+                        </div>
         </main>
     </div>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

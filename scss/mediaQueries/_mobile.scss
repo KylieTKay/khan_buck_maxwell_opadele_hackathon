@@ -245,3 +245,321 @@ main {
   }
   @include a.card-shuffle;
 }
+
+// /////////
+
+// Reel Section
+// plyr.io root
+:root{
+  --plyr-color-main: red;
+  --plyr-control-icon-size: 15px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: Helvetica, Arial, sans-serif;
+  --plyr-control-spacing: 15px;
+  --plyr-video-controls-background:linear-gradient(rgba(0, 0, 0, 0), rgba(171, 7, 7, 0.15));
+}
+#reel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  justify-content: center;
+  margin-bottom: 35px;
+
+  .reel-txt{
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: a.$font1;
+    z-index: 50;
+   @media screen and (min-width: 768px) {
+    width: 95%;
+    justify-self: center;
+    line-height: 30px;
+    padding-top: 90px;
+    font-size: 25px;
+    
+   }
+   @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    padding-top: 90px;
+    
+   }
+  }
+}
+#player-container{
+  margin-top: 5rem;
+  background-color: transparent;
+  z-index: 110;
+  position: relative;
+
+  .plyr__video-wrapper {
+    margin-top: 1rem;
+    background: #000; 
+    border-radius: 20px;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border: #ffffff 5px solid ;
+    overflow: hidden;
+    position: relative;
+    transition: border-radius .7s ease-in-out, width .5s ease-in-out;
+    @media screen and (min-width: 768px){
+      margin-top: 3rem;
+      border-radius: 40px;
+      width: 70%;
+      border: #ffffff 5px solid ;
+    }
+    @media screen and (min-width: 1200px){
+      border-radius: 50px;
+      border: #ffffff 5px solid ;
+      width: 70%;
+    }
+    
+  }
+  .plyr__video-wrapper.smooth {
+    border-radius: 0px;
+    width: 100%;
+    
+  }
+  .plyr--video .plyr__controls {
+    visibility: hidden;
+}
+  
+  .plyr--video .plyr__controls.show-controls {
+    visibility: visible;
+}
+  
+ 
+}
+
+
+/* Floating Red Bubbles */
+#bubble{
+  position: relative;
+  margin-top: -10vh;
+  margin-bottom: 2vh;
+  height: 350px;
+}
+.bubble {
+  background-color:a.$fanshaweRed;
+  border-radius: 50%;
+  // z-index: -1;
+  animation: float 10s infinite ease-in-out;
+  opacity: 1;
+  transition: background-color 2s ease-in-out, transform 2s ease-in-out, top 5s ease-in-out, right 5s ease-in-out;
+  
+}
+
+.bubble-1 {
+  // background-color: #0b19d8; 
+  position:absolute; 
+  width: 60px; 
+  height: 60px; 
+  top: 20%; 
+  left: -2%; 
+  animation-delay: 0s; 
+  @media screen and (min-width: 1200px){
+    top: 5%;
+    left: 5%; 
+  }
+}
+
+.bubble-2 { 
+  // background-color: #950dc6; 
+  position:absolute; 
+  width: 100px; 
+  height: 100px; 
+  top: -70%; 
+  left: 20%; 
+  animation-delay: 2s; 
+  @media screen and (min-width: 768px){
+    top: -135%;
+  }
+  @media screen and (min-width: 1200px){
+    top: -155%;
+    left: 5%; 
+  }
+}
+
+.bubble-3 {
+  // background-color: #f80101; 
+  position:absolute; 
+  width: 80px; 
+  height: 80px; 
+  top: 30%; 
+  right: 15%; 
+  animation-delay: 4s; }
+
+.bubble-4 { 
+  // background-color: #ff6347; 
+  position:absolute; 
+  width: 50px; 
+  height: 50px; 
+  bottom: 30%; 
+  left: 25%; 
+  animation-delay: 1s; }
+
+.bubble-5 {
+  // background-color: #47ffb5; 
+  position:absolute; 
+  width: 90px; 
+  height: 90px; 
+  top: -80%; 
+  right: 20%; 
+  animation-delay: 3s; 
+  @media screen and (min-width: 768px){
+    top: -125%;
+  }
+  @media screen and (min-width: 1200px){
+    top: -155%;
+    right: 5%; 
+    width: 120px; 
+  height: 120px; 
+  }
+}
+
+.bubble-6 { 
+  // background-color: #e2db03; 
+  position:absolute; 
+  width: 70px; 
+  height: 70px; 
+  bottom: 40%; 
+  left: 40%; 
+  animation-delay: 5s; 
+  @media screen and (min-width: 1200px){ 
+    width: 100px; 
+  height: 100px; 
+  }
+}
+
+.bubble-7 { 
+  // background-color: #000000;  
+  position:absolute; 
+  width: 50px; 
+  height: 50px; 
+  top: 60%; 
+  right: 30%; 
+  animation-delay: 6s; }
+
+
+/* Animation for Floating Bubbles */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+ .bubble:active {
+  background-color: #ff6347; 
+  transform: scale(1.2); 
+  top: 60%; 
+  right: 30%;
+}
+.bubble:hover {
+  background-color: #ff6347; 
+  transform: scale(1.2); 
+  top: 50%; 
+  right: 30%;
+}
+
+/* Floating Image Boxes */
+.float-img {
+  position: absolute;
+  z-index: 2;
+  animation: floatBoxes 12s infinite ease-in-out;
+}
+
+.float-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(1);
+  @media screen and (min-width: 768px){
+    width: 120px;
+    height: 120px;
+  }
+  @media screen and (min-width: 1200px){
+    width: 150px;
+    height: 150px;
+  }
+}
+.float-img img:active {
+ filter: grayscale(0);
+}
+.float-img img:hover {
+  filter: grayscale(0);
+ }
+
+
+
+  .box-1 { 
+    top: 10%; 
+    right: 70%; 
+    animation-delay: 2s; 
+    @media screen and (min-width: 768px){
+      top: 5%;
+    }
+  }
+
+  .box-2 { 
+    top: 10%; 
+    left: 70%; 
+    animation-delay: 0s;
+    @media screen and (min-width: 768px){
+      top: 5%;
+    }
+  }
+
+  .box-3 { 
+    bottom: 25%; 
+    left: 10%; 
+    animation-delay: 5s;
+    @media screen and (min-width: 768px){
+      bottom: 15%;
+    }
+  }
+
+  .box-4 { 
+    top: 60%; 
+    right: 10%; 
+    animation-delay: 3s; 
+    @media screen and (min-width: 768px){
+      top: 75%;
+    }
+  }
+
+/* Animation for Floating Boxes */
+@keyframes floatBoxes {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+.reel-btm-txt{
+  width: fit-content;
+  border: 2px solid a.$black;
+  border-radius: 20px;
+  display: flex;
+  z-index: 50;
+  justify-content: center;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+
+ h2{
+   width: 60%;
+   text-align: center;
+   font-weight: bold;
+   font-size: 14px;
+   font-family: a.$font1;
+   padding: 15px 0px;
+   margin-bottom: 5px;
+   @media screen and (min-width: 768px){
+    font-size: 20px;
+    line-height: 30px;
+  }
+ }
+
+}

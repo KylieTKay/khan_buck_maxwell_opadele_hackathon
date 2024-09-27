@@ -7,7 +7,11 @@
 	let burgerCon = document.querySelector("#burger-con");
 	let logoMobile = document.querySelector("#logoMobile");
 	let logoDesk = document.querySelector("#logoCon");
-
+  const player = new Plyr('video');
+  const playButton = document.querySelector('.plyr__control--overlaid');
+	const videoWrapper = document.querySelector('.plyr__video-wrapper');
+	const videoControls = document.querySelector('.plyr--video .plyr__controls');
+ player;
 	function hamburgerMenu() {
 		burgerCon.classList.toggle("slide-toggle");
 		button.classList.toggle("expanded");
@@ -15,7 +19,15 @@
         logoDesk.classList.toggle("hide");		
 			};
 
+
+      /// reel video js - dev.eo
+   function revealVideo(){
+    videoWrapper.classList.add('smooth');
+    videoControls.classList.add('show-controls');
+ };
+
 	button.addEventListener("click", hamburgerMenu, false);
+  playButton.addEventListener("click", revealVideo);
 		
 })();
 
@@ -66,4 +78,6 @@
 
   // Initial binding
   $('.card-selected').on('click', doTheShuffle)
+
+ 
 })();
