@@ -613,6 +613,88 @@ main {
     }
   }
 }
+// Testimonials Section
+#feedback-container{
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+ 
+  #feedback-head{
+    text-align: center;
+    @media screen and (min-width: 768px){
+      text-align: left;
+    }
+    .lft-fd-back{
+      font-weight: bold;
+      font-family: a.$font2;
+      text-transform: uppercase;
+
+    }
+    .ryt-fd-back{
+      font-weight: normal;
+      font-family: a.$font2;
+      word-spacing: 2px;
+
+    }
+  }
+  #feed-bck-list{
+    display: block;
+    @media screen and (min-width: 768px){
+      .feed-ryt-wall{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+    .fd-align{
+      text-align: right;
+    }
+    .feed-bk{
+      img{
+        margin-top: 15px;
+        border-radius: 50%;
+        border: solid 1px a.$black;
+        width: 70px;
+        height: 70px;
+
+      }
+      .fd-bk-name{
+        font-size: 32px;
+        font-weight: bold;
+        font-family: a.$font2;
+        text-transform: uppercase;
+        @media screen and (min-width: 768px){
+          font-size: 22px;
+        }
+
+      }
+      .fd-para{
+      
+        margin-top: -30px;
+        width: 80%;
+        font-size: 35px;
+        font-family: a.$font2;
+        @media screen and (min-width: 768px){
+          width: 50%;
+          font-size: 23px;
+      
+        }
+      }
+      .feed-ryt-wall {
+        text-align: right;
+
+      }
+      .fd-user{
+        font-size: 20px;
+        font-family: a.$font1;
+        margin-bottom: 20px;
+
+      }
+    }
+
+  }
+
+}
 // Developers Section
 #dev-on-site{
   align-items: center;
