@@ -6,7 +6,7 @@ The-Elite
  Sashoye Maxwell = Designer
  Emmanuel Opadele = Back-End Dev
 
-# ** MY FANSHAWE INTERACTIVE MEDIA WEBSITE**
+# **FANSHAWE INTERACTIVE MEDIA WEBSITE**
 
 Welcome to Informative site for Fanshawe College's Interactive Media Industry Night., which showcases students works, skills, and professional experience as well as meet ups.
 
