@@ -613,3 +613,67 @@ main {
     }
   }
 }
+// Developers Section
+#dev-on-site{
+  align-items: center;
+  justify-content: center;
+  #dev-head{
+    text-align: center;
+  
+    @media screen and (min-width: 768px){
+      text-align: left;
+    }
+    
+    .lft-dev{
+      font-weight: bold;
+      font-family: a.$font2;
+      text-transform: uppercase;
+    }
+    .ryt-dev{
+      font-weight: normal;
+      font-family: a.$font2;
+      word-spacing: 2px;
+      
+      
+    }
+  }
+  #dev-list{
+  display: block;
+  @media screen and (min-width: 768px){
+    display: flex;
+    justify-content: center;
+  }
+  .dev-img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .dev-img img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    @media screen and (min-width: 768px){
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .dev-name{
+    font-size: 32px;
+   font-weight: bolder;
+   font-family: a.$font2;
+   @media screen and (min-width: 768px){
+    font-size: 22px;
+  }
+   }
+   .dev-title{
+   font-family: a.$font1;
+   margin-top: -30px;
+   }
+}
+  
+}
