@@ -1,5 +1,10 @@
-# khan_buck_maxwell_opadele_hackathon
- Informative site for Fanshawe College's Interactive Media Industry Night.
+# Team-Name 
+The-Elite
+# Team-Members
+ Taylor Khan = Front-End Dev
+ Amari Buck = Motion Designer
+ Sashoye Maxwell = Designer
+ Emmanuel Opadele = Back-End Dev
 
 # ** MY FANSHAWE INTERACTIVE MEDIA WEBSITE**
 
