@@ -1,5 +1,6 @@
 body {
   background: #fff;
+  height: 10000px;
 }
 
 .moreBtn {
@@ -143,6 +144,7 @@ main {
   height: fit-content;
   padding-top: 45px;
   padding-bottom: 70px;
+  /* Do The Shuffle! */
 }
 main h2 {
   margin-bottom: 20px;
@@ -152,6 +154,208 @@ main h3,
 main p {
   margin-bottom: 40px;
   text-align: start;
+}
+main #reelSec {
+  padding-top: 70px;
+}
+main #reelSec #videoPlaceHolder {
+  height: 50vw;
+  background-color: #e2231a;
+  border-radius: 50px;
+  margin-bottom: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: xxx-large;
+}
+main #wordSliderBG {
+  background-color: #e2231a;
+  height: 100vh;
+  z-index: 2;
+}
+main #wordSliderBG #BGwords {
+  font-size: 120px;
+  text-align: center;
+  color: #fff;
+}
+main #programInfo {
+  position: relative;
+  background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+  height: 100vh;
+  bottom: 100vh;
+  margin-bottom: -95vh;
+  z-index: 1;
+  align-items: end;
+}
+main #programInfo .prInfo {
+  padding-bottom: 5vh;
+}
+main #programInfo .prInfo .prInfoPic {
+  height: 30vh;
+}
+main .scrollGallery {
+  overflow-y: scroll;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 30px;
+  margin: 0;
+}
+main .scrollGallery .studentCards {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffefef;
+  color: #e2231a;
+  border-color: #e2231a;
+  border: solid 1px;
+}
+main .scrollGallery .studentCards h3 {
+  text-align: center;
+}
+main .scrollGallery .studentCards:hover {
+  scale: 1.1;
+  background-color: #e2231a;
+  color: #fff;
+}
+main .scrollGallery #cardsLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+main .scrollGallery #cardsRight {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 15vw;
+}
+main #finalist {
+  margin: 30px auto;
+}
+main .details {
+  margin-top: 170px;
+}
+main .cardShuffle {
+  height: 180px;
+  margin: 0 10px;
+  align-content: center;
+}
+main .cardShuffle:after {
+  content: " ";
+}
+main .card {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: all 0.8s ease;
+}
+main .card-selected {
+  position: relative;
+  top: -560px;
+  z-index: 0;
+}
+main .card-unselected {
+  position: relative;
+  top: -280px;
+  z-index: 1;
+}
+@keyframes rotate-out {
+  0% {
+    transform-origin: 100% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 300px -25px 0;
+    transform: rotate(5deg) translateX(333px);
+  }
+}
+@keyframes rotate-in {
+  0% {
+    transform-origin: 300px -25px 0;
+    transform: rotate(5deg) translateX(333px);
+  }
+  100% {
+    transform-origin: 100% 50%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes fade-out-and-in {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate-out {
+  0% {
+    -webkit-transform-origin: 100% 50%;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 300px -25px 0;
+    -webkit-transform: rotate(5deg) translateX(333px);
+  }
+}
+@-webkit-keyframes rotate-in {
+  0% {
+    -webkit-transform-origin: 300px -25px 0;
+    -webkit-transform: rotate(5deg) translateX(333px);
+  }
+  100% {
+    -webkit-transform-origin: 100% 50%;
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fade-out-and-in {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main .doTheShuffle .card.card-selected {
+  animation: rotate-out 1s;
+  -webkit-animation: rotate-out 1s;
+}
+main .doTheShuffle .details {
+  animation: fade-out-and-in 2s;
+  -webkit-animation: fade-out-and-in 2s;
+}
+main .doTheShuffle .card.card-unselected {
+  animation: rotate-in 1s;
+  -webkit-animation: rotate-in 1s;
+}
+main .finalist3 {
+  background: red;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
+}
+main .finalist2 {
+  background: grey;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+main .finalist1 {
+  background: black;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -228,6 +432,8 @@ main p {
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
     transition: all 0.8s ease-in-out;
   }
@@ -239,24 +445,17 @@ main p {
     margin-top: -100px;
     opacity: 0;
   }
-  .main-header #logoCon a {
-    height: 100px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .main-header #burger-con {
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 30px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
   }
   .main-header #burger-con #burger-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0;
     list-style: none;
     padding-left: 0;
@@ -272,14 +471,14 @@ main p {
     opacity: 1;
     max-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     margin-top: -100px;
     transition: all 1s ease-in-out;
   }
   .main-header #burger-con.slide-toggle #burger-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 20px 0;
     list-style: none;
     padding-left: 0;

@@ -1,0 +1,122 @@
+@use "../abstracts" as a;
+
+@media screen and (min-width: 1200px) {
+  // HEADER
+  // Display alt
+  // #burger-menu {
+  //     display: flex;
+  //     flex-direction: row;
+  //     margin: 20px 0;
+  //     list-style: none;
+
+  //     .menuItem {
+  //         margin-left: 25px;
+  //         padding-right: 20px;
+  //         border-right: 4px solid white;
+  //         font-size: 20px;
+  //         align-self: center;
+  //         transition: .3s ease-in-out;
+  //     }
+
+  // .menuItem:first-child {
+  //     margin-left: 0;
+  // }
+
+  // .menuItem:last-child {
+  //     margin-right: 0;
+  //     border-right: none;
+  // }
+  .main-header {
+    background: a.$white;
+    height: fit-content;
+    max-width: 100vw;
+    padding: 5% 10%;
+    align-items: center;
+    box-shadow: 0px 15px 15px #00000016;
+    // display: block;
+
+    .fa {
+      color: a.$fanshaweRed;
+      transition: a.$tran2;
+    }
+    .fa:hover {
+      color: a.$accentRed;
+      scale: 1.1;
+    }
+
+    #logoCon a {
+      //   display: none;
+      height: 100px;
+      height: 80px;
+      max-width: 100%;
+      @include a.flex-row;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: a.$tran3;
+    }
+    #logoMobile {
+      display: none;
+    }
+    #logoCon.hide {
+      padding-bottom: 100px;
+      margin-top: -100px;
+      opacity: 0;
+    }
+
+    #burger-con {
+      height: fit-content;
+      @include a.flex-row;
+      margin-top: 30px;
+      opacity: 0;
+      transition: a.$tran4;
+      #burger-menu {
+        @include a.flex-row;
+
+        margin: 0;
+        list-style: none;
+        padding-left: 0;
+
+        .menuItem {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0 solid a.$fanshaweRed;
+          font-size: 1px;
+          transition: a.$tran4;
+        }
+      }
+    }
+
+    #burger-con.slide-toggle {
+      opacity: 1;
+      max-width: 100%;
+      @include a.flex-row;
+
+      justify-content: flex-start;
+      margin-top: -100px;
+      transition: a.$tran1;
+      #burger-menu {
+        @include a.flex-row;
+
+        margin: 20px 0;
+        list-style: none;
+        padding-left: 0;
+
+        .menuItem {
+          margin-bottom: 5vh;
+          padding-bottom: 5vh;
+          border-bottom: 4px solid a.$fanshaweRed;
+          font-size: 5vh;
+          align-self: flex-start;
+          transition: a.$tran2;
+        }
+
+        .menuItem:hover {
+          color: a.$accentRed;
+          border-color: a.$accentRed;
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
