@@ -1,0 +1,160 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin card-shuffle {
+  #finalist {
+    // width: 320px;
+    margin: 30px auto;
+    // position: relative;
+  }
+
+  .details {
+    // position: relative;
+    margin-top: 170px;
+  }
+
+  .cardShuffle {
+    height: 180px;
+    margin: 0 10px;
+    // text-align: center;
+    align-content: center;
+  }
+  .cardShuffle:after {
+    content: " ";
+    // display: table;
+    // clear: both;
+  }
+
+  .card {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    // padding: 60px;
+    // text-align: center;
+    transition: all 0.8s ease;
+  }
+
+  .card-selected {
+    position: relative;
+    top: -560px;
+    z-index: 0;
+  }
+
+  .card-unselected {
+    position: relative;
+    top: -280px;
+    z-index: 1;
+  }
+
+  @keyframes rotate-out {
+    0% {
+      transform-origin: 100% 50%;
+      transform: rotate(0deg);
+    }
+    100% {
+      transform-origin: 300px -25px 0;
+      transform: rotate(5deg) translateX(333px);
+    }
+  }
+
+  @keyframes rotate-in {
+    0% {
+      transform-origin: 300px -25px 0;
+      transform: rotate(5deg) translateX(333px);
+    }
+    100% {
+      transform-origin: 100% 50%;
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes fade-out-and-in {
+    0% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0;
+    }
+    55% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes rotate-out {
+    0% {
+      -webkit-transform-origin: 100% 50%;
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform-origin: 300px -25px 0;
+      -webkit-transform: rotate(5deg) translateX(333px);
+    }
+  }
+
+  @-webkit-keyframes rotate-in {
+    0% {
+      -webkit-transform-origin: 300px -25px 0;
+      -webkit-transform: rotate(5deg) translateX(333px);
+    }
+    100% {
+      -webkit-transform-origin: 100% 50%;
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  @-webkit-keyframes fade-out-and-in {
+    0% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0;
+    }
+    55% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Do The Shuffle! */
+  .doTheShuffle .card.card-selected {
+    animation: rotate-out 1s;
+    -webkit-animation: rotate-out 1s;
+  }
+  .doTheShuffle .details {
+    animation: fade-out-and-in 2s;
+    -webkit-animation: fade-out-and-in 2s;
+  }
+  .doTheShuffle .card.card-unselected {
+    animation: rotate-in 1s;
+    -webkit-animation: rotate-in 1s;
+  }
+
+  .finalist3 {
+    background: red;
+    box-shadow: inset 0 -1px 1px rgba(white, 0.5);
+  }
+  .finalist2 {
+    background: grey;
+    box-shadow: inset 0 -1px 1px rgba(black, 0.5);
+  }
+  .finalist1 {
+    background: black;
+    box-shadow: inset 0 -1px 1px rgba(white, 0.5);
+  }
+}
