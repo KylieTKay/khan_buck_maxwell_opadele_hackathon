@@ -3,13 +3,7 @@
 @media screen and (min-width: 768px) {
   // HEADER
   .main-header {
-    background: a.$white;
     height: fit-content;
-    max-width: 100vw;
-    padding: 5% 10%;
-    align-items: center;
-    box-shadow: 0px 15px 15px #00000016;
-    // display: block;
 
     #burger-con {
       height: fit-content;
@@ -55,6 +49,134 @@
         list-style: none;
         padding-left: 0;
       }
+    }
+  }
+
+  // MAIN
+
+  // hero
+  #heroMain {
+    height: 77vh;
+  }
+  // Reel Section
+  #reel-container {
+    .reel-txt {
+      width: 95%;
+      justify-self: center;
+      line-height: 30px;
+      padding-top: 90px;
+      font-size: 25px;
+    }
+  }
+  #player-container {
+    .plyr__video-wrapper {
+      margin-top: 3rem;
+      border-radius: 40px;
+      width: 70%;
+      border: #ffffff 5px solid;
+    }
+  }
+  .bubble-2 {
+    top: -135%;
+  }
+  .bubble-5 {
+    top: -125%;
+  }
+
+  // /* Floating Image Boxes */
+  .float-img img {
+    width: 120px;
+    height: 120px;
+  }
+  .box-1,
+  .box-2 {
+    top: 5%;
+  }
+  .box-3 {
+    bottom: 15%;
+  }
+  .box-4 {
+    top: 75%;
+  }
+  // /* Animation for Floating Boxes */
+  .reel-btm-txt {
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  // Program Section
+
+  // #wordSliderBG {
+  //   #BGwords {}
+  // }
+  #programInfo {
+    .prInfo {
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .infoPics {
+      display: flex;
+      flex-direction: row;
+      margin-right: -40vw;
+      .prInfoPic {
+        width: 80vw;
+      }
+      .prInfoPic:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  // Testimonials Section
+  #feedback-container {
+    #feedback-head {
+      text-align: left;
+    }
+    #feed-bck-list {
+      .feed-ryt-wall {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+      }
+      .feed-bk {
+        .fd-bk-name {
+          font-size: 22px;
+        }
+        .fd-para {
+          width: 50%;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  // Developers Section
+  #dev-on-site {
+    #dev-head {
+      text-align: left;
+    }
+    #dev-list {
+      display: flex;
+      justify-content: center;
+      .dev-img img {
+        width: 200px;
+        height: 200px;
+      }
+      .dev-name {
+        font-size: 22px;
+      }
+    }
+  }
+
+  // FOOTER
+  footer {
+    #footer-logo {
+      width: 55%;
+    }
+    p {
+      font-size: 12px;
     }
   }
 }
