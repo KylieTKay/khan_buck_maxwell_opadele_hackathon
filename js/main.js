@@ -1,4 +1,5 @@
-(function(){
+// Header
+(function () {
 	"use strict";
 	
 	console.log("fired");
@@ -7,11 +8,7 @@
 	let burgerCon = document.querySelector("#burger-con");
 	let logoMobile = document.querySelector("#logoMobile");
 	let logoDesk = document.querySelector("#logoCon");
-  const player = new Plyr('video');
-  const playButton = document.querySelector('.plyr__control--overlaid');
-	const videoWrapper = document.querySelector('.plyr__video-wrapper');
-	const videoControls = document.querySelector('.plyr--video .plyr__controls');
- player;
+
 	function hamburgerMenu() {
 		burgerCon.classList.toggle("slide-toggle");
 		button.classList.toggle("expanded");
@@ -20,17 +17,51 @@
 			};
 
 
-      /// reel video js - dev.eo
+
+	button.addEventListener("click", hamburgerMenu, false);
+		
+})();
+
+// hero backgroung animation  - AMARI 
+(function () {
+  // variables
+
+  // functions
+
+  // event listeners
+})();
+
+// video player
+(function () {
+  // variables
+  const player = new Plyr('video');
+  const playButton = document.querySelector('.plyr__control--overlaid');
+	const videoWrapper = document.querySelector('.plyr__video-wrapper');
+	const videoControls = document.querySelector('.plyr--video .plyr__controls');
+  // functions
+  /// reel video js - dev.eo
+   player;
+
    function revealVideo(){
     videoWrapper.classList.add('smooth');
     videoControls.classList.add('show-controls');
  };
 
-	button.addEventListener("click", hamburgerMenu, false);
-  playButton.addEventListener("click", revealVideo);
-		
+  // event listeners
+    playButton.addEventListener("click", revealVideo);
+
 })();
 
+// student gallery array
+(function () {
+  // variables
+
+  // functions
+
+  // event listeners
+})();
+
+// card shuffle
 (function () {
   function doTheShuffle() {
     console.log('doTheShuffle')
@@ -60,24 +91,23 @@
 
     var unselectedCard, newSelectedCard
 
-    // bindings off
     $('.card-unselected').off('animationend webkitAnimationEnd', doneTheShuffle)
 
-    // shuffle the cards in the DOM
     $('#finalist').removeClass('doTheShuffle')
     unselectedCard = $('.card-unselected').remove().removeClass('card-unselected')
     $('.cardShuffle').prepend(unselectedCard)
-
-    // mark the top card as selected
     newSelectedCard = $('.cardShuffle .card').last()
-    newSelectedCard.addClass('card-selected')
-
-    // bindings on
-    $('.card-selected').on('click', doTheShuffle)
+    newSelectedCard.addClass('card-selected') = $('.card-selected').on('click', doTheShuffle)
   }
-
   // Initial binding
   $('.card-selected').on('click', doTheShuffle)
+})();
 
- 
+// testimonial array
+(function () {
+  // variables
+
+  // functions
+
+  // event listeners
 })();
