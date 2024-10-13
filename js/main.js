@@ -38,6 +38,7 @@
   const playButton = document.querySelector('.plyr__control--overlaid');
 	const videoWrapper = document.querySelector('.plyr__video-wrapper');
 	const videoControls = document.querySelector('.plyr--video .plyr__controls');
+  const pauseAction = document.querySelector('.plyr__controls__item ')
   // functions
   /// reel video js - dev.eo
    player;
@@ -45,10 +46,17 @@
    function revealVideo(){
     videoWrapper.classList.add('smooth');
     videoControls.classList.add('show-controls');
+    console.log("play icon enabled");
  };
+ function undoSmooth(){
+  videoWrapper.classList.toggle('smooth');
+  videoControls.classList.toggle('show-controls');
+  console.log("pause icon enabled");
+};
 
   // event listeners
     playButton.addEventListener("click", revealVideo);
+    pauseAction.addEventListener("click", undoSmooth);
 
 })();
 
