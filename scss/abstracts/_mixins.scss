@@ -17,7 +17,7 @@
 
   .details {
     // position: relative;
-    margin-top: 170px;
+    margin-top: 200px;
   }
 
   .cardShuffle {
@@ -47,13 +47,18 @@
 
   .card-selected {
     position: relative;
-    top: -560px;
-    z-index: 0;
+    // top: -560px;
+    z-index: 3;
   }
 
-  .card-unselected {
+  .card-unselected1 {
     position: relative;
-    top: -280px;
+    top: -320px;
+    z-index: 1;
+  }
+  .card-unselected2 {
+    position: relative;
+    top: -560px;
     z-index: 1;
   }
 
@@ -156,5 +161,24 @@
   .finalist1 {
     background: black;
     box-shadow: inset 0 -1px 1px rgba(white, 0.5);
+  }
+}
+
+
+// Card Flip
+.cardShuffle{
+  .flip1 {
+    z-index: 5;
+    transform: translateY(20px);
+  }
+  
+  .flip2 {
+    z-index: 5;
+    transform: translateY(10px);
+  }
+  
+  .flip3 {
+    z-index: 4;
+    transform: translateY(30px);
   }
 }
