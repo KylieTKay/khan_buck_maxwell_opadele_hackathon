@@ -69,47 +69,44 @@
   // event listeners
 })();
 
+// dev.eo
+// card flip
 // card shuffle
 (function () {
-  function doTheShuffle() {
-    console.log('doTheShuffle')
-    // bindings off
-    $('.card-selected').off('click', doTheShuffle)
-    // bindings on
-    $('.card-selected').on('animationend webkitAnimationEnd', halfDoneTheShuffle)
-    // actual logic
-    $('#finalist').addClass('doTheShuffle')
-  }
+  // variables
+  const finalOne = document.querySelector('.finalist1');
+  const finalTwo = document.querySelector('.finalist2');
+  const finalThree = document.querySelector('.finalist3');
 
-  function halfDoneTheShuffle() {
-    console.log('halfDoneTheShuffle')
+  // Functions
+function swap1(){
+  finalOne.classList.add('flip1');
+  finalTwo.classList.remove('flip2');
+  finalThree.classList.remove('flip3');
+  console.log("finalist One Called");
+}
 
-    // bindings off
-    $('.card-selected').off('animationend webkitAnimationEnd', halfDoneTheShuffle)
+function swap2(){
+  finalOne.classList.remove('flip1');
+  finalTwo.classList.add('flip2');
+  finalThree.classList.remove('flip3');
+  console.log("finalist two Called");
+}
 
-    // mark it as unselected to set the correct z-index
-    $('.card-selected').removeClass('card-selected').addClass('card-unselected')
+function swap3(){
+  finalOne.classList.remove('flip1');
+  finalTwo.classList.remove('flip2');
+  finalThree.classList.add('flip3');
+  console.log("finalist Three Called");
+}
 
-    // wait until the next animation ends
-    $('.card-unselected').on('animationend webkitAnimationEnd', doneTheShuffle)
-  }
+  // Events
+  finalOne.addEventListener("click", swap1);
+  finalTwo.addEventListener('click', swap2);
+  finalThree.addEventListener('click', swap3);
 
-  function doneTheShuffle() {
-    console.log('doneTheShuffle')
-
-    var unselectedCard, newSelectedCard
-
-    $('.card-unselected').off('animationend webkitAnimationEnd', doneTheShuffle)
-
-    $('#finalist').removeClass('doTheShuffle')
-    unselectedCard = $('.card-unselected').remove().removeClass('card-unselected')
-    $('.cardShuffle').prepend(unselectedCard)
-    newSelectedCard = $('.cardShuffle .card').last()
-    newSelectedCard.addClass('card-selected') = $('.card-selected').on('click', doTheShuffle)
-  }
-  // Initial binding
-  $('.card-selected').on('click', doTheShuffle)
 })();
+
 
 // testimonial array
 (function () {
@@ -119,3 +116,5 @@
 
   // event listeners
 })();
+
+
