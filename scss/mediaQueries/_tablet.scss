@@ -185,4 +185,36 @@
       font-size: 12px;
     }
   }
+  #main-footer{
+    #media-logos{
+      display: flex;
+      margin: 10vh 0;
+      padding: 20px 0;
+      align-content: center;
+      justify-content: center;
+      img{
+        margin: 10px;
+      }
+      
+    }
+    #footer-links{
+      display: flex;
+      justify-content: center;
+      ul{
+       
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 50%;
+       
+        li{
+          
+          cursor: pointer;
+          margin: 10px;
+    
+
+        }}
+     
+    }
+  }
 }

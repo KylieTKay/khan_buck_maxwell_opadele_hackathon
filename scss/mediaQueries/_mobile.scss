@@ -192,13 +192,16 @@ header {
 
 // height: fit-content;
 #heroMain {
-  margin-top: 0;
   justify-items: center;
   text-align: center;
+  overflow: hidden;
+  position: relative;
   h2 {
     margin-bottom: 20px;
     text-align: center;
     font-size: 8vh;
+    z-index: 2;
+    // cursor:none;
     span {
       color: a.$fanshaweRed;
     }
@@ -208,11 +211,106 @@ header {
     margin-bottom: 40px;
     text-align: center;
     font-weight: bold;
+    z-index: 2;
     span {
       font-weight: bolder;
     }
   }
+
+  //
+  .numbers-background{
+    display: none;
+    // @media screen and (min-width: 1200px){
+    //   display: block;
+    // }
+    overflow: hidden;
+    .numbers {
+      position: absolute;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* width: 100%; */
+    z-index: 1;
+    overflow: hidden;
+    left: 0;
+    top:0;
+    }
+    
+    .numbers span {
+      position: relative;
+      font-size: 2em;
+      font-weight: 900;
+      color: rgba(129, 129, 129, 0); /* Transparent white color */
+      line-height: 0.9em;
+      transition: 1s;
+      user-select: none; /* Prevents text selection */
+    }
+    
+    .numbers span:hover {
+      transition: 0s;
+      color: rgb(225, 35, 26);
+      text-shadow: 
+        0 0 10px rgb(225, 35, 26),
+        0 0 20px rgb(225, 35, 26),
+        0 0 40px rgb(225, 35, 26),
+        0 0 80px rgb(225, 35, 26),
+        0 0 160px rgb(225, 35, 26); /* Fixed typo: added space */
+      z-index: 1000;
+    }
+  }
 }
+
+// Shooting Star
+.class{
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  aspect-ratio: 1/1; /* Ensures the circle maintains its shape */
+  background: rgb(225, 35, 26);
+  box-shadow:
+    0 0 10px rgb(225, 35, 26),
+    0 0 20px rgb(225, 35, 26),
+    0 0 30px rgb(225, 35, 26),
+    0 0 50px rgb(225, 35, 26); /* Removed comment */
+  border-radius: 50%;
+  animation: animate 5s linear forwards;
+  // overflow: hidden;
+  z-index: 1;
+  // overflow: hidden;
+}
+
+@keyframes animate {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh);
+      opacity: 0;
+  }
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  width: 50%;
+  height: 100vh;
+  opacity: 0.5; /* Fixed opacity property */
+  background: linear-gradient(rgb(225, 35, 26), transparent);
+}
+
 
 #reelSec {
   padding-top: 70px;
@@ -975,16 +1073,20 @@ header {
 #main-footer {
   justify-self: center;
   margin-top: 15px;
+  background-color: a.$fanshaweRed;
+  color: a.$white;
+  font-family: a.$font2;
+  img {
+    margin: 3vh 0;
+    width: 15vh;
+    height: 15vh;
+  }
   #baner-logo {
     background-color: a.$fanshaweRed;
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      margin: 3vh 0;
-      width: 15vh;
-      height: 15vh;
-    }
+    
   }
 
   #media-logos {
@@ -1001,13 +1103,47 @@ header {
       background-color: a.$fanshaweRed;
       border: solid 2px a.$fanshaweRed;
       border-radius: 100px;
-      img {
-        width: 50px;
-        height: 50px;
-        align-self: center;
-        justify-self: center;
-      }
     }
+    img {
+      // display: flex;
+      width: 50px;
+      height: 50px;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+  .fnsh-logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10vh;
+    img{
+      width: 100px;
+      height: 100px;
+
+    }
+  }
+
+  #footer-links{
+    // padding: 20px;
+    text-align: center;
+      ul{
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        display: block;
+        justify-content: center;
+        gap: 5px;
+        li{
+          color: #FFFFFF; 
+          font-size: 14px;
+          font-family: a.$font2;
+          cursor: pointer;
+          margin: 10px;
+    
+
+        }
+      }
   }
 
   p {
