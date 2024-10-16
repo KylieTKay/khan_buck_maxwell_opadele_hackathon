@@ -8,8 +8,20 @@ body {
   .body {
     width: 100vw;
   }
+
   a {
     text-decoration: none;
+  }
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  h4 {
+    font-size: 24px;
   }
 
   .moreBtn {
@@ -358,6 +370,16 @@ header {
       height: 30vh;
       border-radius: 35px;
     }
+    #pic1 {
+      background-image: url(../images/idp_infor_2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #pic2 {
+      background-image: url(../../images/idp-main-2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 .scrollGallery {
@@ -671,11 +693,11 @@ header {
   margin-right: auto;
   margin-top: -100px;
 
-  h2 {
+  h4 {
     width: 60%;
     text-align: center;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
     font-family: a.$font1;
     padding: 15px 0px;
     margin-bottom: 5px;
@@ -1142,5 +1164,17 @@ header {
   p {
     padding: 20px 0;
     text-align: center;
+  }
+}
+
+// Light Boxes
+
+.lightbox {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  #itinery {
+    background-image: url(../../images/welcome\ banner.png);
   }
 }
