@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <link href="images/f_logo.svg"  rel="icon" type="image/svg+xml">
+    <link href="images/f_logo.svg" rel="icon" type="image/svg+xml" />
     <title>Fanshawe Industry Night</title>
     <!-- Link to reset or normalize before main.css
     only choose one -->
@@ -12,13 +12,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <!-- <link rel="stylesheet" href="reset.css" /> -->
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
+    <div class="body">
       <h1 class="hidden">Hackathon Index</h1>
       <header>
         <div class="main-header grid-con">
@@ -89,8 +89,8 @@
       <section id="reel-container" class="grid-con">
         <h2 class="hidden">Video Reel On Industry Night</h2>
         <h2 class="reel-txt col-span-full m-col-start-3 m-col-span-8">
-          Welcome To Event, the original Social Entertaiment Venue! Get ready to
-          get playful
+          An evening dedicated to celebrating innovation and creativity in the
+          Interactive Media Design Program!
         </h2>
         <!--  -->
         <div id="player-container" class="col-span-full">
@@ -162,12 +162,17 @@
         <h2 id="BGwords">WORDS WORDS WORDS WORDS</h2>
       </section>
       <section id="programInfo" class="grid-con">
-        <div class="col-start-1 col-span-2 m-col-end-8 prInfo">
-          <h2>IGNITE YOUR CREATIVITY AT OUR ART AND DESIGN SYMPOSIUM</h2>
+        <div class="col-start-1 col-span-2 m-col-end-7 prInfo">
+          <h2>UNLEASH YOUR DIGITAL CREATIVITY WITH INTERACTIVE MEDIA DESIGN</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            doloremque assumenda ex, quae voluptatibus voluptates quis doloribus
-            laboriosam atque modi dolorum ullam!
+            Discover a world of digital design, development, and innovation in
+            our two-year Interactive Media Design program at Fanshawe College.
+            Learn the skills that prepare you for a dynamic career in web
+            design, animation, coding, and more.
+            <br />
+
+            <br />
+            Unlock your creative potential and shape your future with us!
           </p>
           <div class="moreBtn">
             <h4>MORE INFO</h4>
@@ -177,7 +182,7 @@
           </div>
         </div>
         <div
-          class="col-span-2 col-start-3 m-col-start-2 m-col-end-13 prInfo infoPics"
+          class="col-span-2 col-start-3 m-col-start-8 m-col-end-13 prInfo infoPics"
         >
           <div class="box prInfoPic"></div>
           <div class="box prInfoPic"></div>
@@ -231,7 +236,7 @@
           <!-- Put Finalist TWO HERE -->
           <div class="card finalist1 flip1 card-selected"></div>
           <!-- Put Finalist ONE HERE -->
-          <div class="card finalist2 flip2 card-unselected1 "></div>
+          <div class="card finalist2 flip2 card-unselected1"></div>
           <!-- Put Finalist THREE HERE -->
           <div class="card finalist3 flip3 card-unselected2"></div>
         </div>
@@ -244,20 +249,33 @@
         </div>
       </div>
       <!-- dev.eo changing section to Div - for some reason sectcion not allowed as child of element main -->
-      <div class="grid-con finalist">
+      <div class="grid-con" id="clientProject">
         <h3 class="secTitle col-span-full">
           <span>CLIENT PROJECT | </span>Level 4 Students
         </h3>
-        <div class="col-start-1 col-span-2 clientInfo">
-          <h2>Student Client Project</h2>
+        <div class="col-start-1 col-span-2 m-col-end-7 clientInfo">
+          <h2>Brothers In Arms Memorial</h2>
           <p>
-            Level 4 students will work in small groups, operating as a
-            mini-studio, to design, develop, and pitch a professional marketing
-            and advertising campaign. Project EcoWave promotes renewable energy
-            for coastal communities vulnerable to climate change.
+            Level 4 students will collaborate in small groups, functioning as
+            mini-studios, to design, develop, and pitch a professional marketing
+            and advertising campaign.
+            <br />
+            <br />
+            Support the creation of a stone memorial honoring the joint efforts
+            of Indian and Canadian soldiers in battle. Commemorate their
+            sacrifices and inspire future generations with the ideals of
+            humanity and freedom.
           </p>
+          <div class="moreBtn">
+            <h4>MORE INFO</h4>
+            <button class="expandingArrow">
+              <i class="fa fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
-        <div class="col-span-2 col-start-3 clientInfo">
+        <div
+          class="col-span-2 col-start-3 m-col-start-8 m-col-end-13 clientInfo"
+        >
           <div class="box clientProjectImg"></div>
         </div>
       </div>
@@ -321,15 +339,14 @@
           <div class="bubble bubble-6"></div>
           <div class="bubble bubble-7"></div>
         </div>
-       
       </section>
 
       <!-- testimonial section end -->
       <!-- developer section start -->
       <section id="dev-on-site" class="grid-con">
         <h2 class="hidden">Meet The Developers</h2>
-         <!-- Floating Red Bubbles -->
-         <div id="bubbles" class="col-span-full">
+        <!-- Floating Red Bubbles -->
+        <div id="bubbles" class="col-span-full">
           <div class="bubble bubble-1"></div>
           <div class="bubble bubble-2"></div>
           <div class="bubble bubble-3"></div>
