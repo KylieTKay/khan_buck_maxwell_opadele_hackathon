@@ -192,8 +192,6 @@
   populateInitialBoxes();
 })();
 
-// dev.eo
-// card flip
 // card shuffle
 (function () {
   // variables
@@ -227,11 +225,4 @@
   finalOne.addEventListener("click", swap1);
   finalTwo.addEventListener("click", swap2);
   finalThree.addEventListener("click", swap3);
-})();
-
-// testimonial array
-(function () {
-  // variables
-  // functions
-  // event listeners
 })();

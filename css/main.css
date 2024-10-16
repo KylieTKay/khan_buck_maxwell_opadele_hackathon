@@ -524,18 +524,24 @@ header {
 }
 
 .finalist3 {
-  background: red;
-  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
+  background-image: url(../images/finalist-3_desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .finalist2 {
-  background: grey;
+  background-image: url(../images/finalist-2_desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .finalist1 {
-  background: black;
-  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
+  background-image: url(../images/finalist-1_desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.5);
 }
 
 :root {
