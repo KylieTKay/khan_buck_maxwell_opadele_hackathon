@@ -11,6 +11,7 @@ body {
   a {
     text-decoration: none;
   }
+
   .moreBtn {
     background-color: a.$white;
     border: solid 1px a.$black;
@@ -109,8 +110,8 @@ header {
     img {
       height: 10vh;
       width: 10vh;
-      border-radius: 100px;
-      background-color: a.$fanshaweRed;
+      // border-radius: 100px;
+      // background-color: a.$fanshaweRed;
       margin-bottom: 10px;
     }
     a {
@@ -218,7 +219,7 @@ header {
   }
 
   //
-  .numbers-background{
+  .numbers-background {
     display: none;
     // @media screen and (min-width: 1200px){
     //   display: block;
@@ -226,18 +227,18 @@ header {
     overflow: hidden;
     .numbers {
       position: absolute;
-    cursor: default;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* width: 100%; */
-    z-index: 1;
-    overflow: hidden;
-    left: 0;
-    top:0;
+      cursor: default;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* width: 100%; */
+      z-index: 1;
+      overflow: hidden;
+      left: 0;
+      top: 0;
     }
-    
+
     .numbers span {
       position: relative;
       font-size: 2em;
@@ -247,15 +248,12 @@ header {
       transition: 1s;
       user-select: none; /* Prevents text selection */
     }
-    
+
     .numbers span:hover {
       transition: 0s;
       color: rgb(225, 35, 26);
-      text-shadow: 
-        0 0 10px rgb(225, 35, 26),
-        0 0 20px rgb(225, 35, 26),
-        0 0 40px rgb(225, 35, 26),
-        0 0 80px rgb(225, 35, 26),
+      text-shadow: 0 0 10px rgb(225, 35, 26), 0 0 20px rgb(225, 35, 26),
+        0 0 40px rgb(225, 35, 26), 0 0 80px rgb(225, 35, 26),
         0 0 160px rgb(225, 35, 26); /* Fixed typo: added space */
       z-index: 1000;
     }
@@ -263,7 +261,7 @@ header {
 }
 
 // Shooting Star
-.class{
+.class {
   visibility: hidden;
   overflow: hidden;
 }
@@ -274,11 +272,8 @@ header {
   width: 20px;
   aspect-ratio: 1/1; /* Ensures the circle maintains its shape */
   background: rgb(225, 35, 26);
-  box-shadow:
-    0 0 10px rgb(225, 35, 26),
-    0 0 20px rgb(225, 35, 26),
-    0 0 30px rgb(225, 35, 26),
-    0 0 50px rgb(225, 35, 26); /* Removed comment */
+  box-shadow: 0 0 10px rgb(225, 35, 26), 0 0 20px rgb(225, 35, 26),
+    0 0 30px rgb(225, 35, 26), 0 0 50px rgb(225, 35, 26); /* Removed comment */
   border-radius: 50%;
   animation: animate 5s linear forwards;
   // overflow: hidden;
@@ -288,20 +283,20 @@ header {
 
 @keyframes animate {
   0% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      transform: translateY(100vh);
-      opacity: 0;
+    transform: translateY(100vh);
+    opacity: 0;
   }
 }
 
 .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 25%;
@@ -310,7 +305,6 @@ header {
   opacity: 0.5; /* Fixed opacity property */
   background: linear-gradient(rgb(225, 35, 26), transparent);
 }
-
 
 #reelSec {
   padding-top: 70px;
@@ -368,37 +362,34 @@ header {
 }
 .scrollGallery {
   overflow-y: scroll;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-column-gap: 30px;
-  margin: 0;
+  height: 66vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  scrollbar-width: none;
+
   .studentCards {
-    height: 30vw;
-    width: 30vw;
-    border-radius: 100px;
+    height: 28vw;
+    width: 28vw;
+    margin: 5px;
+    border-radius: 25px;
     transition: a.$tran2;
     background-color: a.$redWhite;
     color: a.$fanshaweRed;
-    border-color: a.$fanshaweRed;
-    border: solid 1px;
+    // border-color: a.$fanshaweRed;
+    // border: solid 1px;
+    align-content: center;
     h3 {
       text-align: center;
     }
+  }
+  .scrollGallery::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
   }
   .studentCards:hover {
     scale: 1.1;
     background-color: a.$fanshaweRed;
     color: a.$white;
-  }
-  #cardsLeft {
-    @include a.flex-column;
-    align-items: end;
-  }
-  #cardsRight {
-    @include a.flex-column;
-    position: relative;
-    top: 15vw;
   }
 }
 @include a.card-shuffle;
@@ -695,11 +686,17 @@ header {
 
 #clientProject {
   height: 100vh;
-
+  align-items: center;
   .clientProjectImg {
     height: 60vh;
     margin-right: -30px;
     border-radius: 50px 0 0 50px;
+    background-image: url(../images/client_project_desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    // background-clip: fill;
   }
 }
 
@@ -1086,7 +1083,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
   }
 
   #media-logos {
@@ -1117,33 +1113,30 @@ header {
     align-content: center;
     justify-content: center;
     margin-top: 10vh;
-    img{
+    img {
       width: 100px;
       height: 100px;
-
     }
   }
 
-  #footer-links{
+  #footer-links {
     // padding: 20px;
     text-align: center;
-      ul{
-        list-style-type: none; 
-        padding: 0;
-        margin: 0;
-        display: block;
-        justify-content: center;
-        gap: 5px;
-        li{
-          color: #FFFFFF; 
-          font-size: 14px;
-          font-family: a.$font2;
-          cursor: pointer;
-          margin: 10px;
-    
-
-        }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: block;
+      justify-content: center;
+      gap: 5px;
+      li {
+        color: #ffffff;
+        font-size: 14px;
+        font-family: a.$font2;
+        cursor: pointer;
+        margin: 10px;
       }
+    }
   }
 
   p {
