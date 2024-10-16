@@ -22,6 +22,9 @@
       <h1 class="hidden">Hackathon Index</h1>
       <header>
         <div class="main-header grid-con">
+          <div id="hamburger" class="col-start-1">
+            <i class="fa fa-bars"></i>
+          </div>
           <div
             id="logoMobile"
             class="col-start-2 col-end-4 m-col-start-4 m-col-end-10"
@@ -36,9 +39,7 @@
               <h2>INTERACTIVE MEDIA DESIGN</h2>
             </a>
           </div>
-          <div id="hamburger" class="col-start-5">
-            <i class="fa fa-bars"></i>
-          </div>
+
           <div id="logoCon" class="l-col-start-2 l-col-end-12">
             <a
               href="https://www.fanshawec.ca/programs/idp3-interactive-media-design/next"
@@ -54,11 +55,14 @@
             id="burger-con"
           >
             <menu id="burger-menu" class="col-span-full">
-              <li class="menuItem"><a href="*">INDUSTRY NIGHT</a></li>
-              <li class="menuItem"><a href="*">CLIENT PROJECT</a></li>
-              <li class="menuItem"><a href="*">PORTFOLIOS</a></li>
-              <li class="menuItem"><a href="*">RUNNERS UP</a></li>
-              <li class="menuItem"><a href="*">DEVELOPERS</a></li>
+              <li class="menuItem"><a href="#heroMain">INDUSTRY NIGHT</a></li>
+              <li class="menuItem"><a href="#studentGallery">PORTFOLIOS</a></li>
+              <li class="menuItem"><a href="#finalists">RUNNERS UP</a></li>
+              <li class="menuItem">
+                <a href="#clientProject">CLIENT PROJECT</a>
+              </li>
+
+              <li class="menuItem"><a href="#dev-on-site">DEVELOPERS</a></li>
             </menu>
           </nav>
         </div>
@@ -194,7 +198,8 @@
         <div class="scrollGallery col-span-full" id="scrollGallery"></div>
       </section>
       <!-- dev.eo changing section to Div - for some reason sectcion not allowed as child of element main -->
-      <div class="grid-con finalist">
+
+      <section class="grid-con finalist" id="finalist">
         <h3 class="secTitle col-span-2"><span>FINALIST | </span>TOP 3</h3>
         <div class="cardShuffle col-span-full">
           <!-- Put Finalist TWO HERE -->
@@ -211,9 +216,10 @@
             <li>Vestibulum auctor dapibus neque.</li>
           </ul>
         </div>
-      </div>
+      </section>
+
       <!-- dev.eo changing section to Div - for some reason sectcion not allowed as child of element main -->
-      <div class="grid-con" id="clientProject">
+      <section class="grid-con" id="clientProject">
         <h3 class="secTitle col-span-full">
           <span>CLIENT PROJECT | </span>Level 4 Students
         </h3>
@@ -242,7 +248,7 @@
         >
           <div class="clientProjectImg"></div>
         </div>
-      </div>
+      </section>
       <!-- testimonial section Start -->
       <section id="feedback-container" class="grid-con">
         <h2 class="hidden">
