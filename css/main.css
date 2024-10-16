@@ -134,7 +134,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.main-header #logoMobile a h2 {
+.main-header #logoMobile a h4 {
   color: #e2231a;
   font-size: 15px;
   text-align: center;
