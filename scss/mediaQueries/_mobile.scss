@@ -131,7 +131,7 @@ header {
       max-width: 100%;
       @include a.flex-column;
       align-items: center;
-      h2 {
+      h4 {
         color: a.$fanshaweRed;
         font-size: 15px;
         text-align: center;
