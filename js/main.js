@@ -24,12 +24,61 @@
 
 // hero backgroung animation  - AMARI 
 (function () {
-  // variables
+  // Variables
+  let numbers = document.querySelector('.numbers'); // Select the numbers container
+  let numString = numbers.textContent;              // Get the text content of the numbers container
+  let splitNum = numString.split("");               // Split the text into individual characters
+  let spanContent = "";                             // Initialize an empty string to store the HTML content
+  
+  // Function to wrap each number in a <span>
+  function wrapNumbers() {
+      for (let i = 0; i < splitNum.length; i++) {
+          spanContent += "<span>" + splitNum[i] + "</span>";
+      }
+      numbers.innerHTML = spanContent; // Insert the HTML content back into the numbers container
+  }
+  
+  // Event Listener
+  document.addEventListener('DOMContentLoaded', wrapNumbers); // Run the function when the DOM is fully loaded
+  
+  
+  
+  
+  // first script please oragnise whoever is looking at this for the falling stars background
+  
+  // Variables
+  let intervalDuration = 200;  // Interval for creating new stars
+  let starLifetime = 5000;     // How long each star stays on the screen
+  
+  // Function to create falling stars
+  function lines() {
+    let sizeW = Math.random() * 12;           // Random size for each star
+    let duration = Math.random() * 3;         // Random animation duration for each star
+    let e = document.createElement('div');    // Create a new div for the star
+    e.setAttribute('class', 'circle');        // Assign the 'circle' class to the div
 
-  // functions
+    // Find the container with the class 'star-container'
+    let container = document.querySelector('.star-container');
+    
+    container.appendChild(e);                 // Add the star to the star-container
+  
+    // Set the styles for the star (width, height, position, and animation duration)
+    e.style.width = 2 + sizeW + 'px'; 
+    e.style.height = 2 + sizeW + 'px'; 
+    e.style.left = Math.random() * innerWidth + 'px'; 
+    e.style.animationDuration = 2 + duration + 's';
+  
+    // Remove the star after it completes its animation (after 5 seconds)
+    setTimeout(function () {
+        container.removeChild(e);  // Remove the star from the star-container
+    }, starLifetime);
+  }
+  
+  // Event Listener
+  setInterval(lines, intervalDuration); // Continuously create stars every 200ms
+  
+  })();
 
-  // event listeners
-})();
 
 // video player
 (function () {
