@@ -4,8 +4,8 @@
   // HEADER
 
   .main-header {
-    height: 20vh;
-    padding: 20px;
+    // height: 10vh;
+    // padding: 20px;
 
     #logoCon {
       display: grid;
@@ -101,5 +101,13 @@
       //   border-right: none;
       // }
     }
+  }
+
+  // MAIN
+
+  // hero
+  #heroMain {
+    height: 100vh;
+    align-content: center;
   }
 }
