@@ -111,7 +111,7 @@
     "Taylor Khan",
     "Yi Ting Lai",
     "Wing Lam Stephanie Chan",
-    "Wimarsha Heshan Jayasinghe Jayasinghe Mudalige",
+    "Wimarsha Heshan Mudalige",
     "Timothy Bryle Flores",
     "Tapshveer Benipal",
     "Tanya Mae Huertas",
@@ -146,56 +146,49 @@
     "Bernardo Jr. Macapagal",
     "Apapat Juntarattanakamol",
     "Ali El Maniary",
-
-    // Add as many names as needed
   ];
 
-  let currentIndex = 12; // Start from 12, since the first 12 names will be pre-populated
+  let currentIndex = 12;
 
-  // Function to create a single student card
   function createStudentCard(name) {
     const newCard = document.createElement("div");
     newCard.classList.add("studentCards", "box");
 
-    const studentName = document.createElement("h3");
+    const studentName = document.createElement("h4");
     studentName.textContent = name;
 
     newCard.appendChild(studentName);
     return newCard;
   }
 
-  // Populate the first 12 names into the gallery
   function populateInitialBoxes() {
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 9; i++) {
       const studentCard = createStudentCard(studentNames[i]);
       gallery.appendChild(studentCard);
     }
   }
 
-  // Infinite scroll event listener
   gallery.addEventListener("scroll", () => {
     if (gallery.scrollTop + gallery.clientHeight >= gallery.scrollHeight) {
       loadMoreStudents();
     }
   });
 
-  // Function to append new student cards
   function loadMoreStudents() {
     if (currentIndex >= studentNames.length) {
-      return; // Stop loading more if we've exhausted the array
+      return;
     }
 
-    const boxesToAdd = Math.min(9, studentNames.length - currentIndex); // Add up to 9, but no more than the remaining names in the array
+    const boxesToAdd = Math.min(9, studentNames.length - currentIndex);
 
     for (let i = 0; i < boxesToAdd; i++) {
       const studentCard = createStudentCard(studentNames[currentIndex]);
       gallery.appendChild(studentCard);
 
-      currentIndex++; // Move to the next student name
+      currentIndex++;
     }
   }
 
-  // Initial population of the first 12 student cards
   populateInitialBoxes();
 })();
 

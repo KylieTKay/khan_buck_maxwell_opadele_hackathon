@@ -1,6 +1,15 @@
 @use "../abstracts" as a;
 
 @media screen and (min-width: 1200px) {
+  body {
+    h2 {
+      font-size: 80px;
+    }
+    h3 {
+      font-size: 65px;
+    }
+  }
+
   // HEADER
 
   .main-header {

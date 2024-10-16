@@ -22,6 +22,17 @@ body .body {
 body a {
   text-decoration: none;
 }
+body h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+body h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+body h4 {
+  font-size: 24px;
+}
 body .moreBtn {
   background-color: #fff;
   border: solid 1px #000;
@@ -340,6 +351,16 @@ header {
 #programInfo .infoPics .prInfoPic {
   height: 30vh;
   border-radius: 35px;
+}
+#programInfo .infoPics #pic1 {
+  background-image: url(../images/idp_infor_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#programInfo .infoPics #pic2 {
+  background-image: url(../../images/idp-main-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .scrollGallery {
@@ -779,11 +800,11 @@ header {
   margin-right: auto;
   margin-top: -100px;
 }
-.reel-btm-txt h2 {
+.reel-btm-txt h4 {
   width: 60%;
   text-align: center;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 15px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   padding: 15px 0px;
   margin-bottom: 5px;
@@ -1220,7 +1241,23 @@ header {
   text-align: center;
 }
 
+.lightbox {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+}
+.lightbox #itinery {
+  background-image: url(../../images/welcome\ banner.png);
+}
+
 @media screen and (min-width: 768px) {
+  body h2 {
+    font-size: 45px;
+  }
+  body h3 {
+    font-size: 40px;
+  }
   .main-header {
     height: fit-content;
   }
@@ -1399,6 +1436,12 @@ header {
   }
 }
 @media screen and (min-width: 1200px) {
+  body h2 {
+    font-size: 80px;
+  }
+  body h3 {
+    font-size: 65px;
+  }
   .main-header #logoCon {
     display: grid;
     opacity: 1;
