@@ -14,8 +14,6 @@
       img {
         height: 15vh;
         width: 15vh;
-        border-radius: 100px;
-        background-color: a.$fanshaweRed;
         margin: 0 70px;
       }
       a {
@@ -109,10 +107,27 @@
   #heroMain {
     height: 100vh;
     align-content: center;
-    .numbers-background{
+    .numbers-background {
       display: block;
-      }
-  
+    }
   }
 
+  // portfolios
+  .scrollGallery {
+    height: 47vh;
+    .studentCards {
+      height: 10vw;
+      width: 15vw;
+      margin: 10px;
+      border-radius: 25px;
+    }
+  }
+
+  // client project
+
+  #clientProject {
+    .clientProjectImg {
+      background-image: url(../images/client_project_desktop.png);
+    }
+  }
 }
